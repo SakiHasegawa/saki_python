@@ -21,7 +21,7 @@ while True:
         max = guess - 1    
     print(f'猜了{count}次')    
 print(f'遊戲結束')
-again = input('再玩一次?(Y/N):')
+
 
 
 

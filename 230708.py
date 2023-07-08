@@ -5,9 +5,8 @@ min = 1
 max = 100
 target = random.randint(min, max)
 print('====猜數字遊戲====')
-
-
 count = 0
+
 while True:
     guess = int(input(f'輸入數字({min}~{max}):'))
     count+=1
@@ -20,9 +19,9 @@ while True:
     elif guess > target:
         print('錯了,小一點')
         max = guess - 1    
-    print(f'猜了{count}次')
+    print(f'猜了{count}次')    
 print(f'遊戲結束')
-
+again = input('再玩一次?(Y/N):')
 
 
 

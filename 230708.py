@@ -1,26 +1,26 @@
-#!/usr/bin/python3.10.2
+# #!/usr/bin/python3.10.2
 
-import random
-min = 1
-max = 100
-target = random.randint(min, max)
-print('====猜數字遊戲====')
-count = 0
+# import random
+# min = 1
+# max = 100
+# target = random.randint(min, max)
+# print('====猜數字遊戲====')
+# count = 0
 
-while True:
-    guess = int(input(f'輸入數字({min}~{max}):'))
-    count+=1
-    if guess == target:
-        print(f'賓果, 數字是{target},猜了{count}次')
-        break
-    elif guess < target:
-        print('錯了,大一點')
-        min = guess + 1
-    elif guess > target:
-        print('錯了,小一點')
-        max = guess - 1    
-    print(f'猜了{count}次')    
-print(f'遊戲結束')
+# while True:
+#     guess = int(input(f'輸入數字({min}~{max}):'))
+#     count+=1
+#     if guess == target:
+#         print(f'賓果, 數字是{target},猜了{count}次')
+#         break
+#     elif guess < target:
+#         print('錯了,大一點')
+#         min = guess + 1
+#     elif guess > target:
+#         print('錯了,小一點')
+#         max = guess - 1    
+#     print(f'猜了{count}次')    
+# print(f'遊戲結束')
 
 
 
@@ -57,3 +57,46 @@ print(f'遊戲結束')
 #         print("猜錯了")
 #         print(f"您已經猜了{count}次")
 # print("遊戲結束")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def playGame():
+    import random
+    min = 1
+    max = 100
+    target = random.randint(min, max)
+    print(target)
+    print('====猜數字遊戲====')
+    count = 0
+
+    while True:
+        guess = int(input(f'輸入數字({min}~{max}):'))
+        count+=1
+        if guess == target:
+            print(f'賓果, 數字是{target},猜了{count}次')
+            break
+        elif guess < target:
+            print('錯了,大一點')
+            min = guess + 1
+        elif guess > target:
+            print('錯了,小一點')
+            max = guess - 1    
+        print(f'猜了{count}次')    
+
+while(True):
+    playGame()
+    play_again = input('again?(y/n)?')
+    if not (play_again == 'y'):
+        break
+print(f'遊戲結束')

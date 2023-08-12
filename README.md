@@ -37,3 +37,6 @@ https://youtube.com/live/p5hTNu9ccac
 
 2023_08_05_下午
 https://youtube.com/live/GwFAasPudx0
+
+2023_08_12_早上
+https://youtube.com/live/80cKnBpDw-Q

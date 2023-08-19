@@ -4,6 +4,7 @@ import streamlit as st
 import ffn
 import matplotlib.pyplot as plt
 import plotly.express as px
+import os
 
 st.write("""
 # 股票交易價格
@@ -14,7 +15,9 @@ def getStockNames()->pd.Series:
     - 取得股票名稱
     - 透過台灣codeSearch.csv檔
     '''
-    with open('codeSearch.csv',encoding='utf-8',newline='') as file:
+    csv_path = os.path.abspath('/lesson16/codeSearch.csv')
+    #local_path = "codeSearch.csv"    
+    with open(csv_path,encoding='utf-8',newline='') as file:
         next(file)
         csv_reader = csv.reader(file)
         stock_codes = {}

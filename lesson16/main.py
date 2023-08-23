@@ -15,9 +15,9 @@ def getStockNames()->pd.Series:
     - 取得股票名稱
     - 透過台灣codeSearch.csv檔
     '''
-    csv_path = os.path.abspath('/lesson16/codeSearch.csv')
-    #local_path = "codeSearch.csv"    
-    with open(csv_path,encoding='utf-8',newline='') as file:
+    #csv_path = os.path.abspath('/lesson16/codeSearch.csv')
+    local_path = "codeSearch.csv"    
+    with open(local_path,encoding='utf-8',newline='') as file:
         next(file)
         csv_reader = csv.reader(file)
         stock_codes = {}
@@ -97,3 +97,4 @@ if len(names) != 0:
     dataFrame1 = raname_columns_name(dataFrame,stockNames)
     st.sidebar.write("you selected:",start_year)
     display_Data(dataFrame1,start_year)
+
